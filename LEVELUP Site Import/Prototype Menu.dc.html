@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="./assets/fonts/fonts.css" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" />
+</helmet>
+<div style="font-family:'Inter',system-ui,-apple-system,sans-serif; color:#F0F5FF; min-height:100%; height:100%; display:flex; flex-direction:column; background:radial-gradient(620px 620px at 10% 4%, rgba(43,123,255,.34), transparent 62%), radial-gradient(540px 540px at 94% 30%, rgba(150,88,255,.26), transparent 62%), radial-gradient(600px 600px at 34% 92%, rgba(79,216,255,.20), transparent 62%), radial-gradient(420px 420px at 88% 78%, rgba(255,120,90,.13), transparent 66%), linear-gradient(180deg,#080D1B,#04070F)">
+
+  <div style="flex:1; display:flex; flex-direction:column; padding:22px 16px 24px; position:relative; z-index:2">
+    <sc-if value="{{ showBrand }}" hint-placeholder-val="{{ true }}">
+    <div style="margin-bottom:16px">
+      <h1 style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.035em; font-size:clamp(42px,12vw,58px); line-height:.92; text-transform:uppercase; margin:0">Level<em style="font-style:normal; background:linear-gradient(120deg,#8FEBFF,#2B7BFF 70%,#8E5CFF); -webkit-background-clip:text; background-clip:text; color:transparent">up</em></h1>
+      <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.3em; text-transform:uppercase; color:#93A3C4; margin-top:12px">Train · Rank · Cash out</div>
+      <div style="margin-top:10px">
+        <span style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; padding:4px 9px; border-radius:999px; border:1px solid currentColor; color:#FFC85C">Interactive preview · resets on refresh</span>
+      </div>
+    </div>
+    </sc-if>
+
+    <div style="margin-bottom:16px">
+      <div style="position:relative; border-radius:24px; overflow:hidden; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(24px) saturate(175%); -webkit-backdrop-filter:blur(24px) saturate(175%); box-shadow:0 10px 30px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.22)">
+        <div style="position:relative; padding:14px">
+          <div style="display:flex; align-items:center; gap:14px; position:relative">
+            <svg width="46" height="54" viewBox="0 0 86 100" aria-hidden="true">
+              <polygon points="43,3 83,26 83,74 43,97 3,74 3,26" fill="none" stroke="#4FD8FF" stroke-width="4" opacity=".45"></polygon>
+              <polygon points="43,14 73,32 73,68 43,86 13,68 13,32" fill="#4FD8FF" opacity=".14"></polygon>
+              <polygon points="43,33 60,45 43,40 26,45" fill="#4FD8FF" opacity="1"></polygon>
+              <polygon points="43,48 60,60 43,55 26,60" fill="#4FD8FF" opacity="1"></polygon>
+              <polygon points="43,63 60,75 43,70 26,75" fill="#4FD8FF" opacity="0.16"></polygon>
+            </svg>
+            <div>
+              <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:19px">Boral</div>
+              <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:10px; margin-top:5px; letter-spacing:.08em; color:#4FD8FF">PLATINUM II · LVL 23</div>
+            </div>
+            <div style="margin-left:auto; text-align:right">
+              <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:22px; color:#FFC85C; line-height:1">12</div>
+              <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:#93A3C4">day streak</div>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; margin:10px 0 6px; font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.14em; text-transform:uppercase; color:#93A3C4"><span>rank progress</span><span>1,100 / 1800 XP</span></div>
+          <div style="height:8px; border-radius:999px; overflow:hidden; background:rgba(0,0,0,.32); box-shadow:inset 0 1px 2px rgba(0,0,0,.5)"><i style="display:block; height:100%; width:61.1%; border-radius:999px; background:linear-gradient(90deg,#4FD8FF,#4FD8FF); box-shadow:0 0 12px rgba(79,216,255,.5)"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:auto; display:flex; flex-direction:column; gap:9px">
+      <button style="display:block; width:100%; text-align:left; position:relative; border-radius:24px; overflow:hidden; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(24px) saturate(175%); -webkit-backdrop-filter:blur(24px) saturate(175%); box-shadow:0 10px 30px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.22); color:inherit; font-family:inherit; cursor:pointer; padding:0; transition:transform .25s cubic-bezier(.3,1.2,.4,1), background .25s, box-shadow .25s" style-hover="background:rgba(255,255,255,.10)">
+        <div style="position:relative; padding:14px; display:flex; align-items:center">
+          <span style="width:4px; min-height:36px; border-radius:999px; align-self:stretch; margin-right:15px; background:rgba(255,255,255,.16)"></span>
+          <div>
+            <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:19px">Train</div>
+            <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:#93A3C4; margin-top:6px">4 quests open today</div>
+          </div>
+          <div style="margin-left:auto; display:flex; align-items:center; gap:9px; padding-left:10px">
+            <span style="min-width:21px; height:21px; padding:0 7px; border-radius:999px; background:linear-gradient(135deg,#FF9E7A,#FF5C7A); color:#2A0710; font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:10px; font-weight:600; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 10px rgba(255,92,122,.45)">4</span>
+            <span style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; font-size:15px; color:#93A3C4">▸</span>
+          </div>
+        </div>
+      </button>
+
+      <button style="display:block; width:100%; text-align:left; position:relative; border-radius:24px; overflow:hidden; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(24px) saturate(175%); -webkit-backdrop-filter:blur(24px) saturate(175%); box-shadow:0 10px 30px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.22); color:inherit; font-family:inherit; cursor:pointer; padding:0; transition:transform .25s cubic-bezier(.3,1.2,.4,1), background .25s, box-shadow .25s" style-hover="background:rgba(255,255,255,.10)">
+        <div style="position:relative; padding:14px; display:flex; align-items:center">
+          <span style="width:4px; min-height:36px; border-radius:999px; align-self:stretch; margin-right:15px; background:rgba(255,255,255,.16)"></span>
+          <div>
+            <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:19px">Clans</div>
+            <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:#93A3C4; margin-top:6px">not in a clan</div>
+          </div>
+          <div style="margin-left:auto; display:flex; align-items:center; gap:9px; padding-left:10px">
+            <span style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; font-size:15px; color:#93A3C4">▸</span>
+          </div>
+        </div>
+      </button>
+
+      <button style="display:block; width:100%; text-align:left; position:relative; border-radius:24px; overflow:hidden; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(24px) saturate(175%); -webkit-backdrop-filter:blur(24px) saturate(175%); box-shadow:0 10px 30px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.22); color:inherit; font-family:inherit; cursor:pointer; padding:0; transition:transform .25s cubic-bezier(.3,1.2,.4,1), background .25s, box-shadow .25s" style-hover="background:rgba(255,255,255,.10)">
+        <div style="position:relative; padding:14px; display:flex; align-items:center">
+          <span style="width:4px; min-height:36px; border-radius:999px; align-self:stretch; margin-right:15px; background:rgba(255,255,255,.16)"></span>
+          <div>
+            <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:19px">Compete</div>
+            <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:#93A3C4; margin-top:6px">4th of 6 friends · 26,866 global</div>
+          </div>
+          <div style="margin-left:auto; display:flex; align-items:center; gap:9px; padding-left:10px">
+            <span style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; font-size:15px; color:#93A3C4">▸</span>
+          </div>
+        </div>
+      </button>
+
+      <button style="display:block; width:100%; text-align:left; position:relative; border-radius:24px; overflow:hidden; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(24px) saturate(175%); -webkit-backdrop-filter:blur(24px) saturate(175%); box-shadow:0 10px 30px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.22); color:inherit; font-family:inherit; cursor:pointer; padding:0; transition:transform .25s cubic-bezier(.3,1.2,.4,1), background .25s, box-shadow .25s" style-hover="background:rgba(255,255,255,.10)">
+        <div style="position:relative; padding:14px; display:flex; align-items:center">
+          <span style="width:4px; min-height:36px; border-radius:999px; align-self:stretch; margin-right:15px; background:rgba(255,255,255,.16)"></span>
+          <div>
+            <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:19px">Rank</div>
+            <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:#93A3C4; margin-top:6px">700 xp to PLATINUM I</div>
+          </div>
+          <div style="margin-left:auto; display:flex; align-items:center; gap:9px; padding-left:10px">
+            <span style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; font-size:15px; color:#93A3C4">▸</span>
+          </div>
+        </div>
+      </button>
+
+      <button style="display:block; width:100%; text-align:left; position:relative; border-radius:24px; overflow:hidden; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(24px) saturate(175%); -webkit-backdrop-filter:blur(24px) saturate(175%); box-shadow:0 10px 30px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.22); color:inherit; font-family:inherit; cursor:pointer; padding:0; transition:transform .25s cubic-bezier(.3,1.2,.4,1), background .25s, box-shadow .25s" style-hover="background:rgba(255,255,255,.10)">
+        <div style="position:relative; padding:14px; display:flex; align-items:center">
+          <span style="width:4px; min-height:36px; border-radius:999px; align-self:stretch; margin-right:15px; background:rgba(255,255,255,.16)"></span>
+          <div>
+            <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:19px">Rewards</div>
+            <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:#93A3C4; margin-top:6px">1,240 coins ready</div>
+          </div>
+          <div style="margin-left:auto; display:flex; align-items:center; gap:9px; padding-left:10px">
+            <span style="min-width:21px; height:21px; padding:0 7px; border-radius:999px; background:linear-gradient(135deg,#FF9E7A,#FF5C7A); color:#2A0710; font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:10px; font-weight:600; display:flex; align-items:center; justify-content:center; box-shadow:0 3px 10px rgba(255,92,122,.45)">2</span>
+            <span style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; font-size:15px; color:#93A3C4">▸</span>
+          </div>
+        </div>
+      </button>
+
+      <button style="display:block; width:100%; text-align:left; position:relative; border-radius:24px; overflow:hidden; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(24px) saturate(175%); -webkit-backdrop-filter:blur(24px) saturate(175%); box-shadow:0 10px 30px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.22); color:inherit; font-family:inherit; cursor:pointer; padding:0; transition:transform .25s cubic-bezier(.3,1.2,.4,1), background .25s, box-shadow .25s" style-hover="background:rgba(255,255,255,.10)">
+        <div style="position:relative; padding:14px; display:flex; align-items:center">
+          <span style="width:4px; min-height:36px; border-radius:999px; align-self:stretch; margin-right:15px; background:rgba(255,255,255,.16)"></span>
+          <div>
+            <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:19px">Shop</div>
+            <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:#93A3C4; margin-top:6px">kit and apparel</div>
+          </div>
+          <div style="margin-left:auto; display:flex; align-items:center; gap:9px; padding-left:10px">
+            <span style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; font-size:15px; color:#93A3C4">▸</span>
+          </div>
+        </div>
+      </button>
+
+      <button style="display:block; width:100%; text-align:left; position:relative; border-radius:24px; overflow:hidden; background:rgba(255,255,255,.055); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(24px) saturate(175%); -webkit-backdrop-filter:blur(24px) saturate(175%); box-shadow:0 10px 30px rgba(0,0,0,.34), inset 0 1px 0 rgba(255,255,255,.22); color:inherit; font-family:inherit; cursor:pointer; padding:0; transition:transform .25s cubic-bezier(.3,1.2,.4,1), background .25s, box-shadow .25s" style-hover="background:rgba(255,255,255,.10)">
+        <div style="position:relative; padding:14px; display:flex; align-items:center">
+          <span style="width:4px; min-height:36px; border-radius:999px; align-self:stretch; margin-right:15px; background:rgba(255,255,255,.16)"></span>
+          <div>
+            <div style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; letter-spacing:-.02em; font-size:19px">Friends</div>
+            <div style="font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:#93A3C4; margin-top:6px">3 of 5 online</div>
+          </div>
+          <div style="margin-left:auto; display:flex; align-items:center; gap:9px; padding-left:10px">
+            <span style="font-family:'Manrope','Inter',system-ui,sans-serif; font-weight:800; font-size:15px; color:#93A3C4">▸</span>
+          </div>
+        </div>
+      </button>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; margin-top:16px; font-family:'IBM Plex Mono',ui-monospace,Menlo,monospace; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:#93A3C4">
+      <span style="color:#5CF0B0">● Kit paired · tripod ready</span>
+      <span>Season 1 · 0.4</span>
+    </div>
+  </div>
+
+  <nav style="display:flex; position:sticky; bottom:14px; margin:6px 16px 14px; padding:6px; border-radius:999px; z-index:20; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.13); backdrop-filter:blur(30px) saturate(185%); -webkit-backdrop-filter:blur(30px) saturate(185%); box-shadow:0 14px 40px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.22)">
+    <button style="flex:1; padding:9px 0 8px; border:none; border-radius:999px; display:flex; flex-direction:column; align-items:center; gap:4px; cursor:pointer; font-family:inherit; color:#04101F; background:linear-gradient(135deg,#8FEBFF,#4FA6FF); box-shadow:0 5px 16px rgba(43,123,255,.4), inset 0 1px 0 rgba(255,255,255,.55)">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-8 9 8M6 10v11h12V10"></path></svg>
+      <span style="font-size:9.5px; font-weight:600; letter-spacing:.02em">Menu</span>
+    </button>
+    <button style="flex:1; padding:9px 0 8px; border:none; background:none; border-radius:999px; display:flex; flex-direction:column; align-items:center; gap:4px; cursor:pointer; font-family:inherit; color:#93A3C4; transition:.25s" style-hover="color:#F0F5FF; background:rgba(255,255,255,.07)">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11a4 4 0 100-8 4 4 0 000 8zM2 21c0-4 3-6 7-6s7 2 7 6M17 8a3 3 0 100-6M18 21c0-3-1-5-3-6"></path></svg>
+      <span style="font-size:9.5px; font-weight:600; letter-spacing:.02em">Clans</span>
+    </button>
+    <button style="flex:1; padding:9px 0 8px; border:none; background:none; border-radius:999px; display:flex; flex-direction:column; align-items:center; gap:4px; cursor:pointer; font-family:inherit; color:#93A3C4; transition:.25s" style-hover="color:#F0F5FF; background:rgba(255,255,255,.07)">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21h14M8 21V9M12 21V4M16 21v-8"></path></svg>
+      <span style="font-size:9.5px; font-weight:600; letter-spacing:.02em">Compete</span>
+    </button>
+  </nav>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:360,&quot;height&quot;:700}}">class Component extends DCLogic {
+  renderVals() {
+    return { showBrand: this.props.hideBrand !== true };
+  }
+}</script>
+</body>
+</html>
